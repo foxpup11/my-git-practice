@@ -1,0 +1,7 @@
+{
+  "name": "my-git-practice",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
