@@ -1,34 +1,31 @@
+# .github/workflows/ci.yml
 name: CI
 
-# 触发条件：推送到 main 或创建 PR
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-# 工作流中的任务
 jobs:
-  # 测试任务
-  test:
+  lint:
     runs-on: ubuntu-latest
-    
     steps:
-      # 检出代码
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      # 设置 Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'  # 缓存 npm 依赖
-      
-      # 安装依赖
-      - name: Install dependencies
-        run: npm ci
-      
-      # 运行测试
-      - name: Run tests
-        run: npm test
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint  # 运行 lint 检查
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
