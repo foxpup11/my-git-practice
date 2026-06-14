@@ -1,0 +1,31 @@
+{
+  "name": "my-git-practice",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test.js",
+    "lint": "eslint ."
+  },
+  "description": "my-git-practice Git 实战练习仓库",
+  "main": "test.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxpup11/my-git-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/foxpup11/my-git-practice/issues"
+  },
+  "homepage": "https://github.com/foxpup11/my-git-practice#readme",
+  "devDependencies": {
+    "@eslint/css": "^1.3.0",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^2.0.0",
+    "@eslint/markdown": "^8.0.2",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
+    "typescript-eslint": "^8.61.0"
+  }
+}
