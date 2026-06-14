@@ -2,7 +2,8 @@
   "name": "my-git-practice",
   "version": "1.0.0",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "lint": "eslint ."
   },
   "description": "my-git-practice Git 实战练习仓库",
   "main": "test.js",
@@ -13,7 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/foxpup11/my-git-practice/issues"
   },

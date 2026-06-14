@@ -1,4 +1,4 @@
-const assert = require('assert');
+import assert from 'assert';
 
 // 简单的测试
 function add(a, b) {
